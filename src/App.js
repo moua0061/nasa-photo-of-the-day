@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 import "./App.css";
+import {baseUrl, apiKey, keyConnector} from './APIkeys'
 
-axios.get('https://api.nasa.gov/planetary/apod');
 
 function App() {
+
+  const [nasaData, setNasaData] = useState([]);
+  const [nasaInfo, setNasaInfo] = useState([]);
+
+  axios.get(`${baseUrl}${keyConnector}${apiKey}`)
+  .then(resp => {
+    console.log(resp);
+  })
+  .catch (err => {
+    console.log('your shit ain\'t working!!');
+  })
+
+
+
+
   return (
     <div className="App">
       <p>
