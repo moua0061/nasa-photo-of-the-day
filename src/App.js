@@ -1,5 +1,8 @@
 import React from "react";
+import axios from 'axios';
 import "./App.css";
+
+axios.get('https://api.nasa.gov/planetary/apod');
 
 function App() {
   return (
