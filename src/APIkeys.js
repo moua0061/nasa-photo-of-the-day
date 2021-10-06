@@ -1,3 +1,2 @@
-const baseUrl = 'https://api.nasa.gov/planetary/apod';
-const apiKey = 'MfEb6c9Y3m7bFaSeflHCOH21fXiWNhXgD94LRO4K';
-const keyConnector = '?api_key=';
+export const baseUrl = 'https://api.nasa.gov/planetary/apod';
+export const apiKey = 'bEPe1rFyA1Pfwg3q0cnO20C4hMeSquRB4awSYAyb';
