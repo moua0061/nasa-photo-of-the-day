@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import {baseUrl, apiKey, keyConnector} from './APIkeys'
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 
 //picture components
-const ImgDiv = styled.div`
-    width: 250px;
-    height: 250px;
+const StyledImg = styled.div`
+    display: flex;
+    justify-content: center;
 `;
 
 // <img className="APOD_image" alt='APOD image' src={`${nasaData.url}`} />
-const ImgAPOD = styled.img`
-    
-`;
+
+
