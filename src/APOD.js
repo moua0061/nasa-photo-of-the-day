@@ -5,4 +5,10 @@ import styled, { keyframes } from 'styled-components';
 
 //picture components
 
-<img className="APOD_image" alt='APOD image' src={`${nasaData.url}`} />
+
+// <img className="APOD_image" alt='APOD image' src={`${nasaData.url}`} />
+
+// 
+{/* <span>
+    <h1> Picture of the day</h1>
+</span> */}

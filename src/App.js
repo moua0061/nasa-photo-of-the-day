@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./App.css";
-import {baseUrl, apiKey, keyConnector} from './APIkeys'
 import Header from './Header'
 import APOD from './APOD';
 import Details from './Details'
 
+import {baseUrl, apiKey, keyConnector} from './APIkeys'
+import styled, { keyframes } from 'styled-components';
+
+
+const BlackH1 = styled.h1`
+  color: color: #FAF9F6;
+  font-family: ;
+`;
 
 function App() {
 
@@ -27,14 +34,12 @@ useEffect(() => {
 },[])
 
 
-
-
   return (
     <div className="App">
       <div className='Header'>
-        <div className='Container-main'>
+        <div className='container-main'>
           <div className='APOD-img-container'>
-            <h1> Picture of the day!</h1>
+            <BlackH1> Picture of the day!</BlackH1>
             <img className="APOD_image" alt='APOD image' src={`${nasaData.url}`} />
           <div className='information detail'>
             <p>
