@@ -1,13 +1,63 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import "./App.css";
+import Header from './Header'
+import APOD from './APOD';
+import Details from './Details'
+
+import {baseUrl, apiKey, keyConnector} from './APIkeys'
+import styled, { keyframes } from 'styled-components';
+
+
+const BlackH1 = styled.h1`
+  color: color: #FAF9F6;
+  font-family: ;
+`;
 
 function App() {
+
+  const [nasaData, setNasaData] = useState([]);
+  const [nasaInfo, setNasaInfo] = useState([]);
+
+useEffect(() => {
+  
+  axios.get(`${baseUrl}?api_key=${apiKey}`)
+  .then(resp => {
+    console.log(resp.data);
+    return setNasaData(resp.data);
+  })
+  .catch (err => {
+    console.log('your shit ain\'t working!!');
+  
+  })
+  
+},[])
+
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <div className='Header'>
+        <div className='container-main'>
+          <div className='APOD-img-container'>
+            <BlackH1> Picture of the day!</BlackH1>
+            <img className="APOD_image" alt='APOD image' src={`${nasaData.url}`} />
+          <div className='information detail'>
+            <p>
+              {`${nasaData.title}`}
+            </p>
+            <p>
+            {`${nasaData.date}`}
+            </p>
+            <p>
+            {`${nasaData.explanation}`}
+            </p>
+            <p>
+            {`By: ${nasaData.copyright}`}
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
