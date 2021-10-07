@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./App.css";
 import {baseUrl, apiKey, keyConnector} from './APIkeys'
+import Header from './Header'
+import APOD from './APOD';
+import Details from './Details'
 
 
 function App() {
