@@ -4,11 +4,12 @@ import styled, { keyframes } from 'styled-components';
 
 
 //picture components
-
+const ImgDiv = styled.div`
+    width: 250px;
+    height: 250px;
+`;
 
 // <img className="APOD_image" alt='APOD image' src={`${nasaData.url}`} />
-
-// 
-{/* <span>
-    <h1> Picture of the day</h1>
-</span> */}
+const ImgAPOD = styled.img`
+    
+`;

@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
+import styled, { keyframes } from 'styled-components';
+import {baseUrl, apiKey, keyConnector} from './APIkeys'
 import axios from 'axios';
 import "./App.css";
 import Header from './Header'
 import APOD from './APOD';
 import Details from './Details'
 
-import {baseUrl, apiKey, keyConnector} from './APIkeys'
-import styled, { keyframes } from 'styled-components';
+// !!!!!! style components goes here !!!!!!!
 
-
+//h1 
 const BlackH1 = styled.h1`
   color: color: #FAF9F6;
-  font-family: ;
+  font-family: 'times new roman';
+  style: 'bold';
 `;
+
+//
 
 function App() {
 
@@ -36,27 +40,9 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <div className='Header'>
         <div className='container-main'>
-          <div className='APOD-img-container'>
             <BlackH1> Picture of the day!</BlackH1>
             <img className="APOD_image" alt='APOD image' src={`${nasaData.url}`} />
-          <div className='information detail'>
-            <p>
-              {`${nasaData.title}`}
-            </p>
-            <p>
-            {`${nasaData.date}`}
-            </p>
-            <p>
-            {`${nasaData.explanation}`}
-            </p>
-            <p>
-            {`By: ${nasaData.copyright}`}
-            </p>
-          </div>
-          </div>
-        </div>
       </div>
     </div>
   );

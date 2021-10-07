@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from 'styled-components';
 
-const HeaderDiv = styled.div`
-    font-family: ;
+const TopBar=styled.div`
     width: 100%;
-    height: 25%;
-    margin: 5px;
-    background-color: #353935;
-    color: #FAF9F6;
+    height: 100px;
+    display: flex;
+    flex-wrap: row wrap;
 `;
+
+export default TopBar;
