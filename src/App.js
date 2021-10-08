@@ -41,11 +41,11 @@ useEffect(() => {
   return (
     <div className='App'>
       <Header/>
-      <Container>
+      <div className='container-main'>
           <BlackH1> PICTURE OF THE DAY!</BlackH1>
             <Apod url={nasaData.url}></Apod>
             <Details title={nasaData.tile} explanation={nasaData.explanation} copyright={nasaData.copyright} date={nasaData.date}></Details>
-      </Container>
+      </div>
     </div>
   );
 }
